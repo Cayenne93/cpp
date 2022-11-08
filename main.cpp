@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    int n;
-    cin>>n;
-    if(n>0) cout<<"TAIP";
-    else cout<<"NE" ;
+    int x, y;
+    cin >> x >> y;
+    if(x == y) cout << x * y;
+    else cout << (x * 2) + (y * 2);
     return 0;
 }
