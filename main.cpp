@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    int z, x, y;
-    cin >> z >> x >> y ;
-    if(z>x and z<=y) cout << "TAIP";
-    else cout << "NE";
+    int x;
+    cin >> x;
+    if(x<1000 and x>99) cout << "TAIP";
+    else cout << "NE" ;
     return 0;
 }
