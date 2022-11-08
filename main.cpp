@@ -2,11 +2,24 @@
 
 using namespace std;
 
+bool subtract(int& time, int reset){
+    if (time > 0) {
+        time--;
+        return false;
+    } else {
+        time = reset;
+        return true;
+    }
+}
+
 int main() {
-    int n;
-    cin >> n;
-    cout << n;
-    if (n % 10 == 0 or (n % 100 >= 11 and n % 100 <= 19)) cout << " metu";
-    else cout << " metai";
+    int h, m, s;
+    cin >> h >> m >> s;
+
+    if (subtract(s, 59))
+        if (subtract(m, 59))
+            subtract(h, 23);
+
+    cout << h << " " << m << " " << s;
     return 0;
 }
